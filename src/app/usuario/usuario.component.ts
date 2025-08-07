@@ -9,6 +9,7 @@ import { type Usuario } from './usuario.model';
 })
 export class UsuarioComponent {
   @Input({ required: true }) usuario!: Usuario;
+  @Input({ required: true }) seleccionado!: boolean;
   @Output() seleccion = new EventEmitter<string>();
 
   get rutaImagen() {
