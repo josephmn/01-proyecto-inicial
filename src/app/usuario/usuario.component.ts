@@ -1,4 +1,4 @@
-import { Component, computed, Input, input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-usuario',
@@ -7,19 +7,16 @@ import { Component, computed, Input, input } from '@angular/core';
   styleUrl: './usuario.component.css'
 })
 export class UsuarioComponent {
-  // @Input({ required: true }) avatar!: string;
-  // @Input({ required: true }) nombre!: string;
-  avatar = input.required<string>();
-  nombre = input.required<string>();
+  @Input({ required: true }) id!: string;
+  @Input({ required: true }) avatar!: string;
+  @Input({ required: true }) nombre!: string;
+  @Output() seleccion = new EventEmitter();
 
-  // get rutaImagen() {
-  //   return 'assets/usuarios/' + this.avatar;
-  // }
-
-  rutaImagen = computed(() => { 
-    'assets/usuarios/' + this.avatar() 
-  });
+  get rutaImagen() {
+    return 'assets/usuarios/' + this.avatar;
+  }
 
   alSeleccionarUsuario() {
+    this.seleccion.emit({ id: this.id });
   }
 }
