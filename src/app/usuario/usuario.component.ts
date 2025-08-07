@@ -7,8 +7,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './usuario.component.css'
 })
 export class UsuarioComponent {
-  @Input() avatar!: string;
-  @Input() nombre!: string;
+  @Input({ required: true }) avatar!: string;
+  @Input({ required: true }) nombre!: string;
 
   get rutaImagen() {
     return 'assets/usuarios/' + this.avatar;
