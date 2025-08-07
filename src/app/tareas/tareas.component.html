@@ -7,14 +7,10 @@
   </header>
 
   <ul>
-    <li>
-      <app-tarea />
-    </li>
-    <li>
-      <app-tarea />
-    </li>
-    <li>
-      <app-tarea />
-    </li>
+    @for (tarea of tareasUsuarioSeleccionado; track tarea.id) {
+        <li>
+          <app-tarea />
+        </li>
+    }
   </ul>
 </section>
