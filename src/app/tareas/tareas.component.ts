@@ -38,4 +38,8 @@ export class TareasComponent {
   get tareasUsuarioSeleccionado() {
     return this.tareas.filter(tarea => tarea.idUsuario === this.idUsuario);
   }
+
+  alCompletarTarea(id: string) {
+    this.tareas = this.tareas.filter(tarea => tarea.id !== id);
+  }
 }
