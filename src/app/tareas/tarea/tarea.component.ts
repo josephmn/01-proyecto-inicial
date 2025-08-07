@@ -1,12 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-interface Tarea {
-  id: string,
-  idUsuario: string,
-  titulo: string,
-  resumen: string,
-  expira: string,
-}
+import { Tarea } from './tarea.model';
 
 @Component({
   selector: 'app-tarea',
