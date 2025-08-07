@@ -1,4 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+interface Tarea {
+  id: string,
+  idUsuario: string,
+  titulo: string,
+  resumen: string,
+  expira: string,
+}
 
 @Component({
   selector: 'app-tarea',
@@ -8,5 +16,5 @@ import { Component } from '@angular/core';
   styleUrl: './tarea.component.css'
 })
 export class TareaComponent {
-
+  @Input({ required: true }) tarea!: Tarea;
 }
