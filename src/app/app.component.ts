@@ -3,12 +3,11 @@ import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { UsuarioComponent } from "./usuario/usuario.component";
 import { USUARIOS_FALSOS } from './usuarios-falsos';
 import { TareasComponent } from "./tareas/tareas.component";
-import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-raiz',
   standalone: true,
-  imports: [EncabezadoComponent, UsuarioComponent, TareasComponent, NgFor, NgIf],
+  imports: [EncabezadoComponent, UsuarioComponent, TareasComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
