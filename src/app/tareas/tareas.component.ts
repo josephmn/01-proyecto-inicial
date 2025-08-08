@@ -49,4 +49,8 @@ export class TareasComponent {
   alIniciarNuevaTarea() {
     this.estaAgregandoTareaNueva = true;
   }
+
+  alCancelarTareaNueva() {
+    this.estaAgregandoTareaNueva = false;
+  }
 }
